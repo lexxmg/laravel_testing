@@ -1,0 +1,11 @@
+
+cd example-app
+
+/Applications/XAMPP/bin/php artisan serve
+
+
+/Applications/XAMPP/bin/php artisan make:controller TestMessage
+
+
+/Applications/XAMPP/bin/php artisan migrate
+/Applications/XAMPP/bin/php artisan migrate:rollback
