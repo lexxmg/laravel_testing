@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\TestMessage;
+use App\Http\Controllers\TestRequest;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +19,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+//http://localhost:8000/show-message/3
+Route::get('/show-message/{iteration}', [TestMessage::class, 'showMessage'])->name('show-message');
+
+//http://localhost:8000/test-request?items=43
+Route::get('/test-request', [TestRequest::class, 'testGet'])->name('test-request');
