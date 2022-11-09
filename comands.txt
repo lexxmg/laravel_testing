@@ -8,4 +8,18 @@ cd example-app
 
 
 /Applications/XAMPP/bin/php artisan migrate
+/Applications/XAMPP/bin/php artisan migrate --seed
+
 /Applications/XAMPP/bin/php artisan migrate:rollback
+
+/**
+* Создание псевдонима (симлинк) для storage
+* создается в папке public
+*/
+/Applications/XAMPP/bin/php artisan storage:link
+
+/**
+* Создание модели, миграции и фабрики Post
+* имя указывается в единственном числе!
+*/
+/Applications/XAMPP/bin/php artisan make:model Post --migration --factory
