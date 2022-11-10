@@ -13,7 +13,7 @@ cd example-app
 /Applications/XAMPP/bin/php artisan migrate:rollback
 
 /**
-* Создание псевдонима (симлинк) для storage
+* Создание псевдонима (symlink) для storage
 * создается в папке public
 */
 /Applications/XAMPP/bin/php artisan storage:link
