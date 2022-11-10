@@ -1,4 +1,18 @@
+
 const mix = require('laravel-mix');
+
+const fs = require('fs');
+const pathFolder = 'resources/css/';
+
+
+fs.readdir(pathFolder, (err, files) => {
+  const arrayPath = files.map(item => {
+    return pathFolder + '/' + item;
+  });
+
+  //console.log(arrayPath);
+});
+
 
 /*
  |--------------------------------------------------------------------------
@@ -11,11 +25,19 @@ const mix = require('laravel-mix');
  |
  */
 
+const arrayCss = [
+  'normalize.css',
+  'master.css',
+  'header.css',
+  'main.css',
+  'footer.css'
+];
+
+const arrayCssFullPath = arrayCss.map(item => {
+  return 'resources/css/' + item;
+});
+
+console.log(arrayCssFullPath);
+
 mix.js('resources/js/app.js', 'public/js')
-    .styles([
-      'resources/css/normalize.css',
-      'resources/css/master.css',
-      'resources/css/header.css',
-      'resources/css/main.css',
-      'resources/css/footer.css'
-    ], 'public/css/app.css');
+    .styles(arrayCssFullPath, 'public/css/app.css');
