@@ -21,5 +21,6 @@ cd example-app
 /**
 * Создание модели, миграции и фабрики Post
 * имя указывается в единственном числе!
+* и в кемалкейс например (AdminUser)
 */
 /Applications/XAMPP/bin/php artisan make:model Post --migration --factory

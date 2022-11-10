@@ -17,4 +17,9 @@ class Post extends Model
         'discription',
         'img'
     ];
+
+    public function comments()
+    {
+        $this->hasMany(Comment::class)->orderBy('created_at');
+    }
 }
