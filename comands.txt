@@ -24,3 +24,18 @@ cd example-app
 * и в кемалкейс например (AdminUser)
 */
 /Applications/XAMPP/bin/php artisan make:model Post --migration --factory
+
+
+/**
+* Добавить столбец в существующею таблицу users
+*/
+/Applications/XAMPP/bin/php artisan make:migration add_votes_to_users_table --table=users
+
+
+'phone_id' => $this->faker->unique()->numberBetween(1, 20),
+'phone' => $this->faker->numerify('###-###-####')
+$table->foreignId('phone_id')->unique()->nullable()->constrained()->nullOnDelete();
+
+$table->after('email', function ($table) {
+          $table->foreignId('phone_id')->unique()->nullable()->constrained()->nullOnDelete();
+      });
