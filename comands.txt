@@ -32,10 +32,13 @@ cd example-app
 /Applications/XAMPP/bin/php artisan make:migration add_votes_to_users_table --table=users
 
 
-'phone_id' => $this->faker->unique()->numberBetween(1, 20),
-'phone' => $this->faker->numerify('###-###-####')
-$table->foreignId('phone_id')->unique()->nullable()->constrained()->nullOnDelete();
+/**
+* Показать правила маршрутизации
+*/
+/Applications/XAMPP/bin/php artisan route:list
 
-$table->after('email', function ($table) {
-          $table->foreignId('phone_id')->unique()->nullable()->constrained()->nullOnDelete();
-      });
+
+/**
+* Создать middleware Teasting
+*/
+/Applications/XAMPP/bin/php artisan make:middleware Teasting
