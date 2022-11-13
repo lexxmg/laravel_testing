@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('layout');
-})->middleware('testing');
+/**
+* Пример группы маршрутов
+*/
+Route::middleware('testing')->group(function() {
+    Route::get('/test', [\App\Http\Controllers\IndexController::class, 'index'])->name('nome');
+});
+
+Route::get('/', [\App\Http\Controllers\IndexController::class, 'index'])->name('nome');

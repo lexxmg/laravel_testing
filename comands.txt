@@ -39,6 +39,11 @@ cd example-app
 
 
 /**
+* Создать controller IndexController
+*/
+/Applications/XAMPP/bin/php artisan make:controller IndexController
+
+/**
 * Создать middleware Teasting
 */
 /Applications/XAMPP/bin/php artisan make:middleware Teasting
