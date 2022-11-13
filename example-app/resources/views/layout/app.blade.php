@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        <title>Document</title>
+        <title>@yield('title')</title>
 
         <link rel="stylesheet" href="/css/app.css">
 
@@ -13,16 +13,9 @@
     </head>
 
     <body>
-        <header class="header"></header>
 
-        <main class="main">
-            <div class="fixed-container">
-                <h1>шаблон</h1>
-
-                @foreach($posts as $value)
-                    <p>{{ $value->title }}</p>
-                @endforeach
-            </div>
+        @yield('content')
+        
         <footer class="footer"></footer>
     </body>
 </html>

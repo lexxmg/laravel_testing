@@ -9,6 +9,7 @@ cd example-app
 
 /Applications/XAMPP/bin/php artisan migrate
 /Applications/XAMPP/bin/php artisan migrate --seed
+/Applications/XAMPP/bin/php artisan migrate:fresh --seed
 
 /Applications/XAMPP/bin/php artisan migrate:rollback
 

@@ -17,7 +17,6 @@ class PostFactory extends Factory
             'title' => $this->faker->name(),
             'preview' => $this->faker->text(50),
             'discription' => $this->faker->text(),
-            'img' => $this->faker->image('public/storage/posts', 640, 520, null, false)
         ];
     }
 }

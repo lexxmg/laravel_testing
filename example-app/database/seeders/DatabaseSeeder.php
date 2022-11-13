@@ -15,7 +15,9 @@ class DatabaseSeeder extends Seeder
     {
         \App\Models\Phone::factory(20)->create();
         \App\Models\User::factory(10)->create();
-        \App\Models\Post::factory(10)->create();
+        \App\Models\Post::factory(10)->create([
+            'img' => 'шар.jpg'
+        ]);
 
         //\App\Models\AdminUser::factory(1)->create();
         \App\Models\AdminUser::factory(1)->create([

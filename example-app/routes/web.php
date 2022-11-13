@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 * Пример группы маршрутов
 */
 Route::middleware('testing')->group(function() {
-    Route::get('/test', [\App\Http\Controllers\IndexController::class, 'index'])->name('nome');
+    Route::get('/test', [\App\Http\Controllers\IndexController::class, 'index'])->name('home');
 });
 
-Route::get('/', [\App\Http\Controllers\IndexController::class, 'index'])->name('nome');
+Route::get('/', [\App\Http\Controllers\IndexController::class, 'index'])->name('home');
