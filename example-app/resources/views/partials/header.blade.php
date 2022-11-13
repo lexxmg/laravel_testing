@@ -7,7 +7,7 @@
         </li>
 
         <li class="header-nav-list__item">
-          <a href="#" class="header-nav-list__link">pages_2</a>
+          <a href="{{ route('posts.index') }}" class="header-nav-list__link">Все посты</a>
         </li>
 
         <li class="header-nav-list__item">
