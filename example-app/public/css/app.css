@@ -428,6 +428,64 @@ h1, h2, h3, p, figure {
 
 /*============================================================*/
 
+.pagination {
+
+}
+
+.pagination__list {
+  
+}
+
+.pagination-list {
+  display: flex;
+}
+
+.pagination-list__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 30px;
+  height: 30px;
+
+  margin: 0 5px 0 0;
+
+  border: 1px solid black;
+  border-radius: 50%;
+
+  font-size: 16px;
+}
+
+.pagination-list__item:first-child {
+  margin: 0;
+
+  border: 1px solid transparent;
+
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.pagination-list__item:last-child {
+  border: 1px solid transparent;
+
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.pagination-list__item--disabled {
+  display: none;
+}
+
+.pagination-list__link {
+  
+}
+
+.pagination-list__item--active {
+  background-color: yellowgreen;
+
+  color: white;
+}
+
 .header {
   display: flex;
   justify-content: space-between;

@@ -45,6 +45,13 @@ cd example-app
 /Applications/XAMPP/bin/php artisan make:controller IndexController
 
 /**
+* Создать ссылку для редактирования пагинатора, шаблон появится в каталоге
+* resources/views/vendor/pagination
+* файл для редактирования tailwind.blade.php
+*/
+/Applications/XAMPP/bin/php artisan vendor:publish --tag=laravel-pagination
+
+/**
 * Создать middleware Teasting
 */
 /Applications/XAMPP/bin/php artisan make:middleware Teasting
