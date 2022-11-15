@@ -1,0 +1,14 @@
+.auth-container {
+  width: 400px;
+  
+  margin: 0 auto;
+}
+
+.auth-container__title {
+  text-align: center;
+}
+
+.auth-form {
+
+}
+

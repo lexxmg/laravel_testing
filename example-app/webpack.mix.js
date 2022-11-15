@@ -28,6 +28,7 @@ fs.readdir(pathFolder, (err, files) => {
 const arrayCss = [
   'normalize.css',
   'master.css',
+  'auth-form.css',
   'pagination.css',
   'header.css',
   'main.css',

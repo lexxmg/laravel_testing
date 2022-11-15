@@ -14,4 +14,6 @@
         </div>
     </div>
   </main>
+
+  @include('partials.footer')
 @endsection
