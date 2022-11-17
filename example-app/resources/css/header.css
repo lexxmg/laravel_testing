@@ -29,6 +29,8 @@
 }
 
 .header-nav-list__item {
+  position: relative;
+
   margin: 0 10px 0 0;
 }
 
@@ -37,10 +39,37 @@
 }
 
 .header-nav-list__link {
+
 }
 
 .header__btn-container {
+  display: flex;
+  justify-content: space-between;
+
   color: white;
 }
+
+.header-btn-container__text {
+  display: block;
+
+  margin: 0 10px 0 0;
+} 
+
 .header__btn {
+
+}
+
+.header-nav-list__item--active::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+
+  display: block;
+
+  width: 100%;
+  height: 2px;
+
+  background-color: wheat;
 }

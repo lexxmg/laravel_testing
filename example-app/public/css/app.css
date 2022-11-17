@@ -435,12 +435,76 @@ h1, h2, h3, p, figure {
 }
 
 .auth-container__title {
+  margin: 20px 0 0 0;
+
   text-align: center;
 }
 
 .auth-form {
+  width: 400px;
+
+  margin: 50px auto;
+  padding: 5px;
+
+  border: 1px solid #000;
+  border-radius: 7px;
+}
+
+.auth-form__label {
+  display: block;
+
+  margin: 0 0 10px 0;
+}
+
+.auth-form__label:last-child {
+  margin: 0;
+}
+
+.auth-form__input {
+  display: block;
+
+  width: 100%;
+  height: 50px;
+
+  padding: 0 7px; 
+}
+
+.auth-container__link {
+  display: block;
+
+  margin: 10px 0;
+}
+
+.auth-form__btn-containet {
 
 }
+
+.auth-form__btn {
+  display: block;
+
+  width: 170px;
+  height: 40px;
+
+  padding: 0%;
+
+  border: 1px solid #000;
+  border-radius: 7px;
+
+  background: none;
+
+  transition: background-color .14s, color .14s;
+}
+
+.auth-form__btn:hover {
+  background-color: #000;
+
+  color: wheat;
+
+  transition: background-color ,color .14s;
+}
+
+
+
 
 
 .pagination {
@@ -532,6 +596,8 @@ h1, h2, h3, p, figure {
 }
 
 .header-nav-list__item {
+  position: relative;
+
   margin: 0 10px 0 0;
 }
 
@@ -540,14 +606,40 @@ h1, h2, h3, p, figure {
 }
 
 .header-nav-list__link {
+
 }
 
 .header__btn-container {
+  display: flex;
+  justify-content: space-between;
+
   color: white;
 }
+
+.header-btn-container__text {
+  display: block;
+
+  margin: 0 10px 0 0;
+} 
+
 .header__btn {
+
 }
 
+.header-nav-list__item--active::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+
+  display: block;
+
+  width: 100%;
+  height: 2px;
+
+  background-color: wheat;
+}
 .main {
   margin: 20px 0 0 0;
 }

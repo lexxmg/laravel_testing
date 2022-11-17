@@ -2,11 +2,11 @@
   <div class="header__nav-container">
     <nav class="header__nav header-nav">
       <ul class="header-nav__list header-nav-list">
-        <li class="header-nav-list__item">
+        <li class="header-nav-list__item {{ request()->routeIs('home') ? 'header-nav-list__item--active' : '' }}">
           <a href={{ route('home') }} class="header-nav-list__link">Главная</a>
         </li>
 
-        <li class="header-nav-list__item">
+        <li class="header-nav-list__item {{ request()->routeIs('posts.index') ? 'header-nav-list__item--active' : '' }}">
           <a href="{{ route('posts.index') }}" class="header-nav-list__link">Все посты</a>
         </li>
 
@@ -17,7 +17,17 @@
     </nav>
   </div>
 
-  <div class="header__btn-container">
-    <a href="#" class="header__btn">Войти</a>
-  </div>
+  @auth
+    <div class="header__btn-container header-btn-container">
+      <span class="header-btn-container__text">{{ Auth::user()->name }}</span>
+
+      <a href={{ route('logout') }} class="header__btn">Выйти</a>
+    </div>
+  @endauth
+  
+  @guest
+    <div class="header__btn-container">
+      <a href={{ route('login') }} class="header__btn">Войти</a>
+    </div>
+  @endguest
 </header>
