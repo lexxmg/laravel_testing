@@ -52,6 +52,8 @@ class AuthController extends Controller
         if (auth('web')->attempt($data, boolval($request->remember))) {
             return redirect(route('home'));
         }
+
+        return redirect(route('login'))->withErrors(['email' => 'Логин или пароль неверы!']);
     }
 
     public function logout()

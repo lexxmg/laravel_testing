@@ -10,8 +10,8 @@
           <a href="{{ route('posts.index') }}" class="header-nav-list__link">Все посты</a>
         </li>
 
-        <li class="header-nav-list__item">
-          <a href="#" class="header-nav-list__link">pages_3</a>
+        <li class="header-nav-list__item {{ request()->routeIs('laurent') ? 'header-nav-list__item--active' : '' }}">
+          <a href="{{ route('laurent') }}" class="header-nav-list__link">Laurent</a>
         </li>
       </ul>
     </nav>
