@@ -45,6 +45,28 @@
   margin: 10px 0;
 }
 
+.auth-form__checkbox-container {
+
+}
+
+.auth-form-checkbox-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  width: 100%;
+}
+
+.auth-form-checkbox-container__label {
+  display: block;
+
+  margin: 0 10px 0 0;
+}
+
+.auth-form-checkbox-container__input {
+
+}
+
 .auth-form__btn-containet {
 
 }

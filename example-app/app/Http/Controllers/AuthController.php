@@ -49,7 +49,7 @@ class AuthController extends Controller
             'password' => ['required']
         ]);
 
-        if (auth('web')->attempt($data)) {
+        if (auth('web')->attempt($data, boolval($request->remember))) {
             return redirect(route('home'));
         }
     }

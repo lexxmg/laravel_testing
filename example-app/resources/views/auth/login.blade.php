@@ -21,6 +21,10 @@
         <input class="auth-form__input" type="password" name="password" placeholder="Пароль">
       </label>
 
+      <div class="auth-form__checkbox-container auth-form-checkbox-container">
+        <label class="auth-form-checkbox-container__label" for="remember">Запомнить меня:</label>
+        <input class="auth-form-checkbox-container__input" id="remember"type="checkbox" name="remember">
+      </div>
 
       <a href="{{ route('register') }}" class="auth-container__link">Регистрация</a>
 
