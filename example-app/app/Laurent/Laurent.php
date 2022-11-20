@@ -27,9 +27,9 @@ class Laurent
         return $xml;
     }
 
-    static function getStatusOut(string $ip, int $out): bool
+    static function getStatusOut(string $url, int $out): bool
     {
-        $res = file_get_contents($ip . '/status.xml');
+        $res = file_get_contents($url . '/status.xml');
         $result = simplexml_load_string($res);
 		    //$json = json_encode($xml);
         //dd($xml->out_table0);
